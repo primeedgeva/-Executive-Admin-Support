@@ -15,7 +15,7 @@ jobs:
             "embeds": [
               {
                 "title": "🧠 Ideal for Entrepreneurs, CEOs, and Small Business Owners",
-                "description": "- Calendar & email management\n- Travel booking & itinerary planning\n- Data entry & file organization\n- Online research & presentation formatting",
+                "description": "• 📅 Calendar & email management\n• ✈️ Travel booking & itinerary planning\n• 📂 Data entry & file organization\n• 🔍 Online research & presentation formatting",
                 "color": 16753920
               }
             ]
