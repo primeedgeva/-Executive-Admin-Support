@@ -1,0 +1,23 @@
+name: Executive VA Services Notice
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Executive VA Services Overview to Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{
+            "embeds": [
+              {
+                "title": "🧠 Ideal for Entrepreneurs, CEOs, and Small Business Owners",
+                "description": "- Calendar & email management\n- Travel booking & itinerary planning\n- Data entry & file organization\n- Online research & presentation formatting",
+                "color": 16753920
+              }
+            ]
+          }' \
+          ${{ secrets.DISCORD_WEBHOOK_URL_what }}
