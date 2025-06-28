@@ -1,0 +1,23 @@
+name: Admin Support Message
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Admin Support Overview to Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{
+            "embeds": [
+              {
+                "title": "🧠 We Become Your Right Hand in Daily Operations",
+                "description": "We support entrepreneurs, executives, and business owners by taking over essential admin work that clutters your day.\n\n- **Calendar & Inbox Management**: Never miss a meeting or important email.\n- **Travel Planning**: Flights, hotels, and logistics—fully handled.\n- **File & Data Organization**: Clean, structured, and easy to access.\n- **Research & Presentations**: Quick briefs or decks, professionally formatted.\n\n__**Our Goal:**__ Give you back time, reduce overwhelm, and keep your operations sharp and organized.",
+                "color": 16753920
+              }
+            ]
+          }' \
+          ${{ secrets.DISCORD_WEBHOOK_URL_how }}
