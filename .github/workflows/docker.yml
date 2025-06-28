@@ -20,4 +20,4 @@ jobs:
               }
             ]
           }' \
-          ${{ secrets.DISCORD_WEBHOOK_URL_HOW }}
+          ${{ secrets.DISCORD_WEBHOOK_URL_what }}
